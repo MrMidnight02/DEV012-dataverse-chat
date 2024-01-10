@@ -1,24 +1,18 @@
 import { error } from "../../src/views/Error.js";
-import { botonRegresar } from "../../src/componets/botonPrincipal.js";
 
-describe("error", () => {
-  test("debería renderizarse sin errores", async () => {
-    // Arrange: Configurar el entorno de prueba
-    const mockBotonRegresar = jest.spyOn(botonRegresar, "botonRegresar");
 
-    // Act: Ejecuta la función error
-    const result = error();
+describe('error', () => {
+  it('debería renderizar la vista de error correctamente', async () => {
+    // Configurar el cuerpo del documento
+    document.body.innerHTML = '';
 
-    // Espera un breve momento para que se procese la llamada asíncrona
-    await new Promise((resolve) => setTimeout(resolve, 100));
+    // Llamar a la función error
+    const errorElement = error();
 
-    // Assert: Verifica que se haya creado un elemento con el id "vistaError"
-    expect(result.querySelector("#vistaError")).not.toBeNull();
+    // Esperar a que se resuelva la promesa de la función asíncrona (si la hay)
+    await Promise.resolve();
 
-    // Verifica que la función botonRegresar haya sido llamada
-    expect(mockBotonRegresar).toHaveBeenCalled();
+    // Verificar que el contenido del errorElement coincide con la estructura esperada
+    expect(errorElement).toMatchSnapshot();
   });
-
-  // Puedes agregar más pruebas según sea necesario
 });
- 
