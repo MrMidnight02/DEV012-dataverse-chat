@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`error debería renderizar la vista de error correctamente 1`] = `
+<div
+  id="vistaError"
+>
+  <button
+    id="botonRegresar"
+  >
+    Regresar
+  </button>
+  <section>
+    
+        
+    <div
+      class="contenedorFlex"
+      id="mensajeError"
+    >
+      
+          
+      <p>
+        Página no encontrada
+      </p>
+      
+          
+      <p>
+        Lo sentimos, al parecer esta parte del arcade no está funcionando.
+      </p>
+      
+          
+      <p>
+        Por favor regresa a la página principal para seguir disfrutando.
+      </p>
+      
+          
+        
+    </div>
+  </section>
+</div>
+`;

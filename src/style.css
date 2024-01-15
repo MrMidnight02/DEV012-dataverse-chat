@@ -216,8 +216,10 @@ position: absolute;
 /* Aqui empiezan los estilos para la vista de Chat grupal */
 
 #chat_grupal {
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows:2fr;
   text-align: center;
-  display: flex;
   justify-content: center;
   align-items: center;
   color: whitesmoke;
@@ -233,7 +235,9 @@ position: absolute;
 }
 
 .uno {
-  display: flex;
+  display: grid;
+  grid-template-columns: 23px repeat(5, 1fr) 23px;
+  grid-template-rows: repeat(7, 1fr);
   justify-content: center;
   align-items: center;
   width: 70%;
@@ -246,7 +250,9 @@ position: absolute;
 }
 
 .dos {
-  display: flex;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 6;
   width: 60%;
   max-width: 750px;
   height: 55vh;
@@ -387,7 +393,7 @@ position: absolute;
 }
 
 .contenedorTexto {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
